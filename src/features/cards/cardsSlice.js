@@ -13,6 +13,7 @@ export const cardsSlice = createSlice({
         addCard: (state, action) => {
             const newCard = action.payload;
             state.cards = {
+                ...state.cards,
                 [newCard.id]: {
                     id: newCard.id,
                     front: newCard.front,
